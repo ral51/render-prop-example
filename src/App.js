@@ -1,10 +1,15 @@
 import React from 'react';
 import { StaticRenderer } from './StaticRenderer';
+import { MouseTracker } from './MouseTracker';
 
 export default function App() {
   function render() {
     return <div> Hello World </div>;
   }
 
-  return <StaticRenderer render={render} />;
+  return (<div>
+  	<StaticRenderer render={render} />
+  	<MouseTracker />
+  	</div>
+  	);
 }
